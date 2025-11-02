@@ -56,18 +56,11 @@ function render(variables = {}) {
   // HTML final de la tarjeta
   document.querySelector("#widget_content").innerHTML = `
     <div class="widget">
-      {cover}
       <img src="${variables.avatarURL ||
         "https://via.placeholder.com/150"}" class="photo" />
-      <h1>{fullName}</h1>
       <h2>{role}</h2>
       <h3>{location}</h3>
-      <ul class="${socialPosition}">
-        {socialLink("twitter", variables.twitter)}
-        {socialLink("github", variables.github)}
-        {socialLink("linkedin", variables.linkedin)}
-        {socialLink("instagram", variables.instagram)}
-      </ul>
+     
     </div>
   `;
 }
